@@ -1,0 +1,50 @@
+/* 
+    Put your style/CSS customizations here.
+    It's loaded after all the other CSS files, so any CSS rules here
+    will override rules in other files.
+ */
+
+/* The following example turns the background to yellow if you uncomment it. */
+/*
+body {
+ background-color: black;
+    color: gray;
+}
+.form-group{
+  background-color: black;
+    color: gray;
+}
+.input-lg{
+  background-color: black;
+    color: gray;
+}
+.panel{
+  background-color: black;
+    color: gray;
+}
+.navbar {
+  background-color: black;
+    color: gray;
+ }
+
+ .panel-default{
+  background-color: black;
+    color: gray;
+ }
+  .panel-footer{
+  background-color: black;
+    color: gray;
+ }
+   .panel-heading{
+  background-color: black;
+    color: gray;
+ }
+    .panel-body{
+  background-color: black;
+    color: gray;
+ }
+ .btn-group{
+   background-color: black;
+    color: gray;
+ }
+ 
