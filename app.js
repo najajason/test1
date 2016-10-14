@@ -10,7 +10,7 @@
   mp_browser_uri: 'https://www.moneypot.com',
   mp_api_uri: 'https://api.moneypot.com',
   chat_uri: 'https://socket.moneypot.com',
-  house_edge: 0.003,
+  house_edge: 0.01,
  }
 
  var app = {
@@ -113,7 +113,7 @@ $(function(){
 var AutoRunning = false;
 
 function login(token){
-    window.history.pushState('', 'to-the-moon', '');
+    window.history.pushState('', '', '');
 
     var loaderContainer = jQuery('<div/>', {
         id:     'loaderContainer',
