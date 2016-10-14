@@ -1,8 +1,3 @@
-/** Credits - Do not edit/remove this comment (Read http://bustasatoshi.xyz/LICENSE)
- * @desc bustasatoshi.xyz core source file
- * @author Dexon <dexon@live.ca> (https://github.com/Dexon95)
- * @contributors 
- */
 
  var config = {
   app_ida: 1493,                             // <----------------------------- EDIT ME!
@@ -118,7 +113,7 @@ $(function(){
 var AutoRunning = false;
 
 function login(token){
-    window.history.pushState('', 'bustasatoshi', '/bustasatoshi');
+    window.history.pushState('', 'to-the-moon', '');
 
     var loaderContainer = jQuery('<div/>', {
         id:     'loaderContainer',
@@ -214,7 +209,7 @@ function placeBet(stopAt, bet, currentAt, stake, callback){
     $('#cashout_input').attr("disabled", true);
 
     $('#bet_cashout_button').text("Cashout");
-    $('#bust_box').html("<span>"+parseFloat((g_currentAt-0.001)<1?0:(g_currentAt-0.001)).formatMoney(2,'.',',')+"</span>x");
+    $('#bust_box').html("<span>"+parseFloat((g_currentAt-0.01)<1?0:(g_currentAt-0.01)).formatMoney(2,'.',',')+"</span>x");
 
     getHash(function(){
         var odds = 0.999/currentAt;
@@ -249,7 +244,7 @@ function placeBet(stopAt, bet, currentAt, stake, callback){
                 betting = false;
                 $('#bet_input').attr("disabled", false);
                 $('#cashout_input').attr("disabled", false);
-                $('#bust_box').html("Crashed @ <span>"+parseFloat((g_currentAt-0.001)<1?0:(g_currentAt-0.001)).formatMoney(2,'.',',')+"</span>x");
+                $('#bust_box').html("Crashed @ <span>"+parseFloat((g_currentAt-0.01)<1?0:(g_currentAt-0.01)).formatMoney(2,'.',',')+"</span>x");
                 $('#bet_cashout_button').text("Bet");
 
                 var table = document.getElementById("history_log");
@@ -265,7 +260,7 @@ function placeBet(stopAt, bet, currentAt, stake, callback){
                 
                 var win = parseFloat(data.profit) >= 0;
                 
-                cell1.innerHTML = parseFloat((g_currentAt-0.001)<1?0:(g_currentAt-0.001)).formatMoney(2,'.',',');
+                cell1.innerHTML = parseFloat((g_currentAt-0.01)<1?0:(g_currentAt-0.01)).formatMoney(2,'.',',');
                 cell1.className = (win?"win":"lost");
                 cell2.innerHTML = $('#bet_input').val();
                 cell3.innerHTML = (data.profit/100).formatMoney(2, '.', ',');
